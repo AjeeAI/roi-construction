@@ -1,0 +1,63 @@
+import React from 'react';
+import { ChevronRight } from 'lucide-react';
+import Button from '../ui/Button';
+import FadeIn from '../ui/FadeIn'; 
+// 1. Keep the local background image import
+import heroBg from '../../assets/bld_img.png'; 
+
+export default function Hero() {
+  return (
+    // We change the bg here to a slightly lighter dark to make the image blend better
+    <section id="home" className="relative h-screen flex items-center pt-20 overflow-hidden bg-[#211b16]">
+      
+      {/* --- Background Area --- */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroBg} 
+          alt="ROi Construction site progress" 
+          // ✅ FIX 1: Maximize brightness and use multiply for a punchy blend
+          className="w-full h-full object-cover opacity-100 mix-blend-multiply" 
+        />
+        
+        {/* ✅ FIX 2: Darken only the left side for text readability. The right stays bright. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1a140f] via-[#1a140f]/70 to-transparent" />
+      </div>
+
+      {/* --- Content Area --- */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        
+        <FadeIn direction="up" delay={0.1}>
+          <span className="bg-roi-orange/20 text-roi-orange border border-roi-orange/30 px-3 py-1 text-xs font-bold tracking-[0.2em] uppercase mb-6 inline-block rounded-sm">
+            Zero Guesswork. 100% Precision.
+          </span>
+        </FadeIn>
+        
+        <FadeIn direction="up" delay={0.3}>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-white">
+            We Don't Guess.<br />
+            <span className="italic text-roi-orange font-light font-serif">We Plan.</span>
+          </h1>
+        </FadeIn>
+        
+        <FadeIn direction="up" delay={0.5}>
+          {/* ✅ FIX 3: Brightened text slightly to make it pop over the brighter background */}
+          <p className="max-w-xl text-gray-200 text-lg mb-8 leading-relaxed">
+            We’re not just putting up buildings; we're creating legacies. From rigorous soil assessment to flawless execution, we build structures that stand long after us.
+          </p>
+        </FadeIn>
+        
+        <FadeIn direction="up" delay={0.7}>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button variant="primary">
+              Book a Scoping Session <ChevronRight size={18} />
+            </Button>
+            <Button variant="outline">
+              View Our Projects
+            </Button>
+          </div>
+        </FadeIn>
+        
+      </div>
+    </section>
+  );
+}

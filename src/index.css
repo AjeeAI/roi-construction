@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* ROi Construction Brand Palette */
+  
+  --color-roi-orange: #b81f24; /* ✅ The exact logo red */
+  --color-roi-dark: #110d0a; 
+  --color-roi-orange: #f38918;
+  --color-roi-dark: #1a140f;
+  --color-roi-accent: #2a221a;
+  --color-roi-teal: #4d948c;
+}
+
+/* Optional: Smooth scrolling for those anchor links in the navbar */
+html {
+  scroll-behavior: smooth;
+}
