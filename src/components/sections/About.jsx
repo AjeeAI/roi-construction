@@ -1,5 +1,5 @@
 import React from 'react';
-import quoteBackground from '/src/assets/roi_image1.png';
+import quoteBackground from '/src/assets/archi_img.png';
 import FadeIn from '../ui/FadeIn';
 
 export default function About() {

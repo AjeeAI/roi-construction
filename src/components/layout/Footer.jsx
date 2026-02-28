@@ -1,7 +1,7 @@
 import React from 'react';
 // Changed the icon imports to include Instagram and LinkedIn since they are active there
 import { Instagram, Linkedin, Globe } from 'lucide-react'; 
-import roiLogo from '../../assets/roi_logo.jpeg'; // Fixed the import location
+import roiLogo from '/src/assets/roi_logo_clear.png'; // Fixed the import location
 
 export default function Footer() {
   return (
@@ -11,11 +11,12 @@ export default function Footer() {
         {/* Brand */}
         <div>
           {/* Updated Logo Wrapper */}
-          <div className="mb-6 inline-block bg-white px-3 py-2 rounded-sm">
+          <div className="mb-6 inline-block">
             <img 
               src={roiLogo} 
               alt="ROi Construction & Engineering LTD" 
-              className="h-10 w-auto object-contain"
+              // Uses brightness and invert to turn the black logo into a clean, professional white
+              className="h-10 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
             />
           </div>
           <p className="text-gray-400 mb-6 leading-relaxed">

@@ -4,6 +4,7 @@ import Button from '../ui/Button';
 import FadeIn from '../ui/FadeIn'; 
 // 1. Keep the local background image import
 import heroBg from '../../assets/bld_img.png'; 
+// import heroBg from '/src/assets/archi_img.png'; // ✅ FIX: Absolute path to ensure it resolves correctly in all environments
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
         <img 
           src={heroBg} 
           alt="ROi Construction site progress" 
-          // ✅ FIX 1: Maximize brightness and use multiply for a punchy blend
+          
           className="w-full h-full object-cover opacity-100 mix-blend-multiply" 
         />
         
@@ -40,9 +41,9 @@ export default function Hero() {
         </FadeIn>
         
         <FadeIn direction="up" delay={0.5}>
-          {/* ✅ FIX 3: Brightened text slightly to make it pop over the brighter background */}
+          
           <p className="max-w-xl text-gray-200 text-lg mb-8 leading-relaxed">
-            We’re not just putting up buildings; we're creating legacies. From rigorous soil assessment to flawless execution, we build structures that stand long after us.
+            We're not just putting up buildings; we're creating legacies. From rigorous soil assessment to flawless execution, we build structures that stand long after us.
           </p>
         </FadeIn>
         
