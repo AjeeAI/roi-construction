@@ -6,6 +6,7 @@ import Services from './components/sections/Services';
 import Contact from './components/sections/Contact';
 import Footer from './components/layout/Footer';
 import Chatbot from './components/ui/Chatbot';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 export default function App() {
   
@@ -72,6 +73,7 @@ export default function App() {
 
       <Footer />
       
+      <ScrollToTop />
       <Chatbot />
     </div>
   );
