@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../ui/Button';
-// 1. Re-imported the JPEG logo
+
 import roiLogo from '/src/assets/roi_logo_clear.png'; 
 
 export default function Navbar() {
@@ -14,12 +14,12 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-[#1a140f]/95 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         
-        {/* 2. Reverted Logo Section with the white pill wrapper */}
+        
         <a href="#home" className="flex items-center z-50">
   <img 
     src={roiLogo} 
     alt="ROi Construction" 
-    // brightness-0 invert will turn the black parts of your logo white
+    
     className="h-10 md:h-12 w-auto object-contain brightness-0 invert transition-opacity hover:opacity-80"
   />
 </a>

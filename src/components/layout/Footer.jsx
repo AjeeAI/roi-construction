@@ -1,7 +1,7 @@
 import React from 'react';
-// Changed the icon imports to include Instagram and LinkedIn since they are active there
+
 import { Instagram, Linkedin, Globe } from 'lucide-react'; 
-import roiLogo from '/src/assets/roi_logo_clear.png'; // Fixed the import location
+import roiLogo from '/src/assets/roi_logo_clear.png'; 
 
 export default function Footer() {
   return (
@@ -10,12 +10,12 @@ export default function Footer() {
         
         {/* Brand */}
         <div>
-          {/* Updated Logo Wrapper */}
+          
           <div className="mb-6 inline-block">
             <img 
               src={roiLogo} 
               alt="ROi Construction & Engineering LTD" 
-              // Uses brightness and invert to turn the black logo into a clean, professional white
+             
               className="h-10 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
             />
           </div>
@@ -23,7 +23,7 @@ export default function Footer() {
             Leading the industry with innovative construction methods, zero guesswork, and a commitment to quality that is unmatched in Nigeria.
           </p>
           <div className="flex gap-4">
-            {/* Added social links based on their active profiles */}
+            
             <a href="https://instagram.com/roiconstruction.ng" target="_blank" rel="noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#2a221a] flex items-center justify-center text-roi-orange hover:bg-roi-orange hover:text-white transition">
               <Instagram size={14} />
             </a>
@@ -51,7 +51,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-6 text-white">Expertise</h4>
           <ul className="space-y-4 text-gray-400">
-            {/* Updated to match their actual core competencies */}
+          
             <li><a href="#" className="hover:text-roi-orange transition">Pre-Construction Planning</a></li>
             <li><a href="#" className="hover:text-roi-orange transition">Foundation & Compaction</a></li>
             <li><a href="#" className="hover:text-roi-orange transition">Structural Engineering</a></li>

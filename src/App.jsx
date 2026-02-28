@@ -13,7 +13,7 @@ export default function App() {
   useEffect(() => {
     const wakeUpBackend = async () => {
       try {
-        // Fixed the slight '/m' typo at the end of your Render URL
+        
         const apiUrl = 'https://roi-construction-backend.onrender.com'; 
         
         const response = await fetch(`${apiUrl}/health`);
@@ -28,7 +28,7 @@ export default function App() {
     wakeUpBackend();
   }, []); 
 
-  // ✅ 2. NEW: Intersection Observer for Dynamic URL Hashing
+ 
   useEffect(() => {
     // Grab all sections that have an ID
     const sections = document.querySelectorAll('section[id], header[id]');
@@ -37,12 +37,12 @@ export default function App() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Silently update the URL bar without jumping
+            
             window.history.replaceState(null, '', `#${entry.target.id}`);
           }
         });
       },
-      // Trigger when the section reaches the middle of the screen
+      
       { rootMargin: '-40% 0px -60% 0px' } 
     );
 
@@ -57,7 +57,7 @@ export default function App() {
   return (
     <div className="bg-roi-dark text-white font-sans selection:bg-roi-orange selection:text-white">
       
-      {/* React 19 natively hoists these to the document <head> */}
+      
       <title>ROi Construction | Building Excellence, Delivering Value</title>
       <meta name="description" content="Professional construction services specializing in residential, commercial, and renovation projects." />
 

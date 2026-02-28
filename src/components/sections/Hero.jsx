@@ -2,13 +2,12 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import Button from '../ui/Button';
 import FadeIn from '../ui/FadeIn'; 
-// 1. Keep the local background image import
+
 import heroBg from '../../assets/bld_img.png'; 
-// import heroBg from '/src/assets/archi_img.png'; // ✅ FIX: Absolute path to ensure it resolves correctly in all environments
 
 export default function Hero() {
   return (
-    // We change the bg here to a slightly lighter dark to make the image blend better
+ 
     <section id="home" className="relative h-screen flex items-center pt-20 overflow-hidden bg-[#211b16]">
       
       {/* --- Background Area --- */}
@@ -20,7 +19,7 @@ export default function Hero() {
           className="w-full h-full object-cover opacity-100 mix-blend-multiply" 
         />
         
-        {/* ✅ FIX 2: Darken only the left side for text readability. The right stays bright. */}
+       
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a140f] via-[#1a140f]/70 to-transparent" />
       </div>
 
@@ -49,7 +48,9 @@ export default function Hero() {
         
         <FadeIn direction="up" delay={0.7}>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="primary">
+            <Button variant="primary"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+>
               Book a Scoping Session <ChevronRight size={18} />
             </Button>
             <Button variant="outline">

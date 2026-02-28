@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
-// Updated imports to include the new icons matching the brand copy
 import { HardHat, Building2, ClipboardCheck, ShieldCheck, Microscope, LineChart } from 'lucide-react';
 import FadeIn from '../ui/FadeIn';
 
@@ -8,26 +7,26 @@ const services = [
   {
     icon: <Microscope size={24} className="text-roi-orange" />,
     title: 'Pre-Construction & Foundation',
-    desc: 'Choosing a foundation isn’t guesswork. We conduct professional soil testing, site evaluations, and rigorous compaction before a single drop of concrete is poured.',
+    desc: "Choosing a foundation isn't guesswork. We conduct professional soil testing, site evaluations, and rigorous compaction before a single drop of concrete is poured.",
     list: ['Soil Testing & Site Inspection', 'Excavation & Compaction', 'Foundation Waterproofing']
   },
   {
     icon: <Building2 size={24} className="text-roi-orange" />,
     title: 'Structural Engineering',
-    desc: 'Safety isn’t optional. It’s structural. We rely on certified engineers to design unique steel reinforcements, perfectly positioned columns, and flawless formwork.',
+    desc: "Safety isn't optional. It's structural. We rely on certified engineers to design unique steel reinforcements, perfectly positioned columns, and flawless formwork.",
     list: ['Custom Steel Reinforcement', 'Load-Bearing Calculations', 'Concrete Casting & Curing']
   },
   {
     icon: <ClipboardCheck size={24} className="text-roi-orange" />,
     title: 'Lean Project Management',
-    desc: 'Stop guessing when your project will finish. Our lean management process replaces hopeful deadlines with certain completion and seamless handover documentation.',
+    desc: "Stop guessing when your project will finish. Our lean management process replaces hopeful deadlines with certain completion and seamless handover documentation.",
     list: ['Predictive Timelines', 'Whole Life Costing', 'Comprehensive Handover']
   }
 ];
 
 const features = [
   { icon: <HardHat size={24} className="text-roi-orange" />, title: 'No Guesswork', desc: 'From soil assessment to execution, every step is intentional.' },
-  { icon: <ShieldCheck size={24} className="text-roi-orange" />, title: 'Built-in Safety', desc: 'Safety isn’t a checklist; it’s built into how we plan and supervise.' },
+  { icon: <ShieldCheck size={24} className="text-roi-orange" />, title: "Built-in Safety', desc: 'Safety isn't a checklist; it's built into how we plan and supervise. "},
   { icon: <LineChart size={24} className="text-roi-orange" />, title: 'Guaranteed ROI', desc: 'We protect property owners from errors that cost millions to fix.' }
 ];
 
@@ -36,7 +35,7 @@ export default function Services() {
     <section id="services" className="py-24 px-6 bg-roi-dark">
       <div className="max-w-7xl mx-auto">
         
-        {/* Animate the Section Header with updated brand title */}
+
         <FadeIn direction="up">
           <SectionHeader subtitle="The ROi Standard" title="Engineering & Construction Solutions" centered />
         </FadeIn>
@@ -50,7 +49,7 @@ export default function Services() {
                   {srv.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{srv.title}</h3>
-                {/* flex-grow pushes the list to the bottom evenly if descriptions vary in length */}
+                
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-grow">{srv.desc}</p>
                 <ul className="space-y-3 mb-8">
                   {srv.list.map((item, i) => (

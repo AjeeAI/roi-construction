@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section id="about" className="relative py-24 px-6 bg-[#1a140f] overflow-hidden">
       
-      {/* Design Element: Brown Shadow/Glow implementation */}
+      
       <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
@@ -21,7 +21,7 @@ export default function About() {
           <span className="text-roi-orange text-xs font-bold uppercase tracking-widest">Bridging Construction & Real Estate</span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 leading-tight text-white">Every Strong Structure Starts<br />With What No One Sees.</h2>
           <p className="text-gray-400 mb-10 leading-relaxed">
-            At ROi Construction & Engineering LTD, we prioritize unseen quality above all else. We know that skipping soil testing or rushing compaction creates financial losses and structural risks. That’s why we rely on our rigorous QA/QC processes to shape spaces that grow in worth, comfort, and design.
+            At ROi Construction & Engineering LTD, we prioritize unseen quality above all else. We know that skipping soil testing or rushing compaction creates financial losses and structural risks. That's why we rely on our rigorous QA/QC processes to shape spaces that grow in worth, comfort, and design.
           </p>
           <div className="flex gap-12 text-white">
             <div className="border-l-2 border-roi-orange pl-4">
@@ -47,7 +47,7 @@ export default function About() {
                 backgroundImage: `url(${quoteBackground})` 
               }}
             >
-              {/* Teal Overlay as seen in reference */}
+              
               <div className="absolute inset-0 bg-[#4d948c]/80 mix-blend-multiply z-0"></div>
               
               {/* Quote Box with enhanced shadow */}

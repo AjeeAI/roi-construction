@@ -22,10 +22,7 @@ export default function Chatbot() {
   
   const messagesEndRef = useRef(null);
 
-  /**
-   * Auto-scroll logic to ensure the latest streamed tokens 
-   * are visible.
-   */
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -60,9 +57,7 @@ export default function Chatbot() {
 
       if (!response.ok) throw new Error('Failed to fetch');
 
-      /** * Utilize ReadableStream to handle the streaming response 
-       * from the FastAPI backend.
-       */
+    
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let fullText = "";
@@ -113,7 +108,7 @@ export default function Chatbot() {
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 bg-[#2a221a] rounded-xl border border-white/10 shadow-2xl flex flex-col h-[500px] overflow-hidden"
           >
-            {/* Header: Indicates the ROi Brand precision mandate [cite: 3] */}
+          
             <div className="bg-[#1a140f] p-4 border-b border-white/10 flex justify-between items-center">
               <h3 className="text-white font-bold flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>

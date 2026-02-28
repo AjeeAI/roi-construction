@@ -13,39 +13,39 @@ export default function Contact() {
 
   const [status, setStatus] = useState('idle'); 
   
-  // ✅ 1. New state to track specific field errors
+ 
   const [errors, setErrors] = useState({});
 
   const validateForm = () => {
     const newErrors = {};
     
-    // Check Full Name
+   
     if (!formData.fullName.trim()) {
       newErrors.fullName = 'Please enter your full name.';
     }
     
-    // Check Email (with basic regex for valid format)
+    
     if (!formData.email.trim()) {
       newErrors.email = 'Please enter your email address.';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address.';
     }
     
-    // Check Message
+    
     if (!formData.message.trim()) {
       newErrors.message = 'Please provide some project details.';
     }
 
     setErrors(newErrors);
     
-    // Return true if there are no errors (object is empty)
+    
     return Object.keys(newErrors).length === 0;
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     
-    // ✅ Clear the error message as soon as the user starts typing to fix it
+    
     if (errors[e.target.name]) {
       setErrors({ ...errors, [e.target.name]: null });
     }
@@ -54,9 +54,9 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // ✅ 2. Run validation before trying to submit
+
     if (!validateForm()) {
-      return; // Stop the function if validation fails
+      return; 
     }
 
     setStatus('submitting');
@@ -123,7 +123,7 @@ export default function Contact() {
 
         {/* Right Side: Form */}
         <FadeIn direction="right" delay={0.2} fullWidth>
-          {/* ✅ 3. Added noValidate to suppress HTML5 default tooltips */}
+          
           <form onSubmit={handleSubmit} noValidate className="bg-[#2a221a] p-8 rounded-lg border border-white/5 shadow-2xl h-full">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               
@@ -135,12 +135,12 @@ export default function Contact() {
                   value={formData.fullName} 
                   onChange={handleChange} 
                   placeholder="John Doe" 
-                  // ✅ Dynamic border color based on error state
+                 
                   className={`w-full bg-[#1a140f] border p-4 rounded outline-none transition text-white ${
                     errors.fullName ? 'border-red-500 focus:border-red-500' : 'border-white/10 focus:border-roi-orange'
                   }`} 
                 />
-                {/* ✅ Render specific error message */}
+                
                 {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
               </div>
 
