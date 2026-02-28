@@ -134,7 +134,7 @@ export default function Contact() {
                   name="fullName" 
                   value={formData.fullName} 
                   onChange={handleChange} 
-                  placeholder="John Doe" 
+                  placeholder="Ogbeni Adesoji" 
                  
                   className={`w-full bg-[#1a140f] border p-4 rounded outline-none transition text-white ${
                     errors.fullName ? 'border-red-500 focus:border-red-500' : 'border-white/10 focus:border-roi-orange'
@@ -151,7 +151,7 @@ export default function Contact() {
                   name="email" 
                   value={formData.email} 
                   onChange={handleChange} 
-                  placeholder="john@example.com" 
+                  placeholder="ogbeni@example.com" 
                   className={`w-full bg-[#1a140f] border p-4 rounded outline-none transition text-white ${
                     errors.email ? 'border-red-500 focus:border-red-500' : 'border-white/10 focus:border-roi-orange'
                   }`} 
