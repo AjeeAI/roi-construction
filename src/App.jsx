@@ -15,7 +15,7 @@ export default function App() {
     const wakeUpBackend = async () => {
       try {
         
-        const apiUrl = 'https://roi-construction-backend.onrender.com'; 
+        const apiUrl = import.meta.env.VITE_API_URL;
         
         const response = await fetch(`${apiUrl}/health`);
         if (response.ok) {

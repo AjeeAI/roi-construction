@@ -46,7 +46,8 @@ export default function Chatbot() {
     setMessages(prev => [...prev, { text: '', isBot: true }]);
 
     try {
-      const response = await fetch('https://roi-construction-backend.onrender.com/chat', { 
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${apiUrl}/chat`, { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -158,7 +159,7 @@ export default function Chatbot() {
                 disabled={isLimitReached || !input.trim() || isLoading}
                 className="bg-[#ea580c] text-white p-2 rounded-lg hover:bg-orange-600 transition-colors disabled:bg-gray-700 disabled:cursor-not-allowed"
               >
-                {isLoading ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+                {isLoading ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} className="rotate-45" />}
               </button>
             </form>
           </motion.div>

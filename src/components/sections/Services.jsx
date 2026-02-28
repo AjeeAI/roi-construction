@@ -26,7 +26,7 @@ const services = [
 
 const features = [
   { icon: <HardHat size={24} className="text-roi-orange" />, title: 'No Guesswork', desc: 'From soil assessment to execution, every step is intentional.' },
-  { icon: <ShieldCheck size={24} className="text-roi-orange" />, title: "Built-in Safety', desc: 'Safety isn't a checklist; it's built into how we plan and supervise. "},
+  { icon: <ShieldCheck size={24} className="text-roi-orange" />, title: 'Built-in Safety', desc: "Safety isn't a checklist; it's built into how we plan and supervise." },
   { icon: <LineChart size={24} className="text-roi-orange" />, title: 'Guaranteed ROI', desc: 'We protect property owners from errors that cost millions to fix.' }
 ];
 
